@@ -1,6 +1,7 @@
 import Liste from "@/components/Liste/Liste.vue";
 import Texte1 from "@/components/Texte1.vue";
 import Texte2 from "@/components/Texte2.vue";
+import Modale from "@/components/Modale/Modale.vue";
 
 export default {
     name: 'Contenu',
@@ -19,7 +20,8 @@ export default {
             titre: 'Je suis le Titre',
             toggle1: true,
             toggle2: false,
-            component: 'texte1'
+            component: 'texte1',
+            revele: false
         }
     },
     methods: {
@@ -33,13 +35,17 @@ export default {
         toggleOng2: function (){
             this.toggle1 = false
             this.toggle2 = true
+        },
+        displayModal: function(){
+            this.revele = !this.revele
         }
 
     },
     components: {
         'liste': Liste,
         'texte1': Texte1,
-        'texte2': Texte2
+        'texte2': Texte2,
+        'modale': Modale
     }
 
 }

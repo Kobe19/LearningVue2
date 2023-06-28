@@ -21,10 +21,10 @@
     <div class="btn btn-outline-primary me-2" @click="toggleOng1">Onglet 1</div>
     <div class="btn btn-outline-primary me-2" @click="toggleOng2">Onglet 2</div>
 
-    <div v-if="toggle1" class="card mb-5 mt-5">
+    <div v-if="toggle1" class="card mb-5 mt-2">
       <texte1 class="p-3"></texte1>
     </div>
-    <div v-if="toggle2" class="card mb-5 mt-5">
+    <div v-if="toggle2" class="card mb-5 mt-2">
       <texte2 class="p-3"></texte2>
     </div>
 
@@ -35,6 +35,9 @@
     <div class="card mt-2 mb-5 p-3">
       <component :is="component"></component>
     </div>
+
+    <button class="btn btn-success mt-3" @click="displayModal">ouvre la modale</button>
+    <modale :revele="revele" :toggleModale="displayModal"></modale>
 
   </div>
 </template>
