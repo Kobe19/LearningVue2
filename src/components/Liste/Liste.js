@@ -36,7 +36,10 @@ export default {
             return this.monTexte = ""
         },
         changeTitre: function () {
-            //this.$emit('changeTitre', 'Mon nouveau Titre')
+            //First way to pass data from child to parent
+            this.$emit('changeTitre', 'Mon nouveau Titre')
+
+            //Second way to pass data from child to parent
             bus.$emit('changeTitre', 'Titre changé avec le Bus')
         }
     }

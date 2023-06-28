@@ -18,7 +18,8 @@ export default {
             monTexte: 'Hello World',
             titre: 'Je suis le Titre',
             toggle1: true,
-            toggle2: false
+            toggle2: false,
+            component: 'texte1'
         }
     },
     methods: {

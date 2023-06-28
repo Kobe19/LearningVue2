@@ -28,6 +28,14 @@
       <texte2 class="p-3"></texte2>
     </div>
 
+    <div class="btn btn-outline-primary me-2" @click="component = 'texte1'">Onglet 1</div>
+    <div class="btn btn-outline-primary me-2" @click="component = 'texte2'">Onglet 2</div>
+
+
+    <div class="card mt-2 mb-5 p-3">
+      <component :is="component"></component>
+    </div>
+
   </div>
 </template>
 
