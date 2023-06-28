@@ -39,6 +39,12 @@
     <button class="btn btn-success mt-3" @click="displayModal">ouvre la modale</button>
     <modale :revele="revele" :toggleModale="displayModal"></modale>
 
+    <h1 class="mt-5">Appel à une API</h1>
+
+    <div class="mt-4">
+      <img :src="urlImg">
+    </div>
+
   </div>
 </template>
 

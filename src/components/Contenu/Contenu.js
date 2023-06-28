@@ -2,6 +2,7 @@ import Liste from "@/components/Liste/Liste.vue";
 import Texte1 from "@/components/Texte1.vue";
 import Texte2 from "@/components/Texte2.vue";
 import Modale from "@/components/Modale/Modale.vue";
+import axios from "axios";
 
 export default {
     name: 'Contenu',
@@ -21,7 +22,8 @@ export default {
             toggle1: true,
             toggle2: false,
             component: 'texte1',
-            revele: false
+            revele: false,
+            urlImg: null
         }
     },
     methods: {
@@ -46,6 +48,15 @@ export default {
         'texte1': Texte1,
         'texte2': Texte2,
         'modale': Modale
+    },
+    mounted() {
+        axios
+            .get('https://api.thecatapi.com/v1/images/search')
+            .then(
+                (response) => {
+                    this.urlImg = response.data[0].url;
+                }
+            )
     }
 
 }
