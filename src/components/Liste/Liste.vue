@@ -29,12 +29,13 @@
     <button @click="RefreshListFilm" class="btn btn-primary ms-2">
       Refraichir la liste
     </button>
-    <button @click="deleteTexte" class="btn btn-primary ms-2">
+    <button @click="deleteTexte" class="btn btn-danger ms-2">
       Supprime le texte
     </button>
-    <button @click="changeTitre" class="btn btn-primary ms-2">
+    <button @click="changeTitre" class="btn btn-success ms-2">
       Modifie le titre
     </button>
+    <slot name="info"></slot>
   </div>
 </template>
 

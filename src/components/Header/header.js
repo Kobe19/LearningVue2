@@ -7,9 +7,19 @@ export default {
             titre: 'Mon titre de base'
         }
     },
+    beforeCreate() {
+    },
     created() {
         bus.$on('changeTitre', (data) => {
             this.titre = data
         })
+    },
+    beforeMount() {
+    },
+    mounted() {
+    },
+    beforeUpdate() {
+    },
+    updated() {
     }
 }
