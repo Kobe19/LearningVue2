@@ -50,15 +50,16 @@
     <form>
       <div class="form-group input-space">
         <label for="prenom">Ton prénom</label>
-        <input type="text" id="prenom" class="form-control" v-model="formData.prenom2">
+        <!-- le @input permet de reinitialiser la saisie-->
+        <input @input="toggleResult" type="text" id="prenom" class="form-control" v-model="formData.prenom2" required>
       </div>
       <div class="form-group input-space">
         <label for="prenom">Ton numero de Telephone</label>
-        <input type="text" id="prenom" class="form-control" v-model.number="formData.telephone">
+        <input @input="toggleResult" type="text" id="prenom" class="form-control" v-model.number="formData.telephone" required>
       </div>
       <div class="form-group input-space">
         <label for="txt">Ton texte</label>
-        <textarea id="txt" class="form-control" v-model="formData.texte"></textarea>
+        <textarea @input="toggleResult" id="txt" class="form-control" v-model="formData.texte"></textarea>
       </div>
       <div class="form-check input-space">
         <input v-model="formData.checkFruits" type="checkbox" id="banane" value="banane" class="form-check-input">
@@ -75,10 +76,10 @@
       <select v-model="formData.select" class="form-select input-space">
         <option v-for="(pays, index) in formData.listePays" :key="index">{{pays}}</option>
       </select>
-      <button type="submit" class="btn btn-primary input-space">Envoyer les données</button>
+      <button @click.prevent="envoiForm" class="btn btn-primary input-space">Envoyer les données</button>
     </form>
 
-    <div v-if="submitInfo">
+    <div v-if="infoSubmit">
       <h2 class="mt-3">Résultats</h2>
 
       <div class="card p-3">

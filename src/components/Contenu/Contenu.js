@@ -51,6 +51,12 @@ export default {
         },
         displayModal: function(){
             this.revele = !this.revele
+        },
+        envoiForm: function (){
+            this.infoSubmit = true
+        },
+        toggleResult: function (){
+            this.infoSubmit = false
         }
 
     },
