@@ -93,6 +93,10 @@
         <p style="white-space: pre">Texte : {{ formData.texte }}</p>
       </div>
     </div>
+    <div>
+      <h2>Aller à ma todoList : </h2>
+      <router-link to="/todo"><button class="btn btn-success">my ToDoList</button></router-link>
+    </div>
 
 
   </div>
