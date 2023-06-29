@@ -22,6 +22,19 @@
           :toggleBtn="toggleBtnFunc"
       >
       </single-task>
+
+      <!--
+      Une autre facon de passer l'id
+      <single-task
+          class="mt-4"
+          v-for="(task, index) in tasks"
+          :task-name="task"
+          :key="index"
+          :id="index"
+          :toggleBtn="toggleBtnFunc2"
+      >
+      </single-task>
+      -->
     </div>
   </div>
 </template>

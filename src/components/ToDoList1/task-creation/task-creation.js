@@ -24,6 +24,10 @@ export default{
         saveData: function (){
             this.tasks.push(this.formData.newTask)
             this.formData.newTask = ''
+        },
+        //Correction sur comment passer l'id
+        toggleBtnFunc2: function(e){
+            return this.tasks.splice(e.target.parentNode.id, 1)
         }
     }
 }
