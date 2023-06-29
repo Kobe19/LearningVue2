@@ -1,5 +1,5 @@
 <script src="./Contenu.js"></script>
-<style scoped></style>
+<style scoped src="./Contenu.css"></style>
 <template>
   <div class="container mt-5">
     <p>{{ txt }}</p>
@@ -44,6 +44,55 @@
     <div class="mt-4">
       <img :src="urlImg">
     </div>
+
+    <h1 class="mt-5">Création de formulaire</h1>
+
+    <form>
+      <div class="form-group input-space">
+        <label for="prenom">Ton prénom</label>
+        <input type="text" id="prenom" class="form-control" v-model="formData.prenom2">
+      </div>
+      <div class="form-group input-space">
+        <label for="prenom">Ton numero de Telephone</label>
+        <input type="text" id="prenom" class="form-control" v-model.number="formData.telephone">
+      </div>
+      <div class="form-group input-space">
+        <label for="txt">Ton texte</label>
+        <textarea id="txt" class="form-control" v-model="formData.texte"></textarea>
+      </div>
+      <div class="form-check input-space">
+        <input v-model="formData.checkFruits" type="checkbox" id="banane" value="banane" class="form-check-input">
+        <label for="banane">Banane</label>
+      </div>
+      <div class="form-check input-space">
+        <input v-model="formData.checkFruits" type="checkbox" id="fraise" value="fraise" class="form-check-input">
+        <label for="fraise">Fraise</label>
+      </div>
+      <div class="form-check input-space">
+        <input v-model="formData.checkFruits" type="checkbox" id="cerise" value="cerise" class="form-check-input">
+        <label for="cerise">Cerise</label>
+      </div>
+      <select v-model="formData.select" class="form-select input-space">
+        <option v-for="(pays, index) in formData.listePays" :key="index">{{pays}}</option>
+      </select>
+      <button type="submit" class="btn btn-primary input-space">Envoyer les données</button>
+    </form>
+
+    <div v-if="submitInfo">
+      <h2 class="mt-3">Résultats</h2>
+
+      <div class="card p-3">
+        <p>Prenom : {{ formData.prenom2 }}</p>
+        <p>Telephone : {{ formData.telephone }}</p>
+        <p>Fruits : </p>
+        <ul>
+          <li v-for="(value, index) in formData.checkFruits" :key="index">{{ value }}</li>
+        </ul>
+        <p>Pays : {{ formData.select }}</p>
+        <p style="white-space: pre">Texte : {{ formData.texte }}</p>
+      </div>
+    </div>
+
 
   </div>
 </template>

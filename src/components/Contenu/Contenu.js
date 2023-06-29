@@ -23,7 +23,18 @@ export default {
             toggle2: false,
             component: 'texte1',
             revele: false,
-            urlImg: null
+            urlImg: null,
+            //Pour le formulaire
+            formData: {
+                prenom2: '',
+                texte: '',
+                telephone: '',
+                checkFruits: [],
+                select: '',
+                listePays: ['Russie', 'Japon', 'Canada', 'Mexique']
+            },
+            infoSubmit: false
+
         }
     },
     methods: {
