@@ -4,9 +4,10 @@ export default {
     name: 'Header',
     data: function (){
         return {
-            titre: 'Mon titre de base'
+            //titre: 'Mon titre de base',
         }
     },
+    props: ['titre'],
     beforeCreate() {
     },
     created() {

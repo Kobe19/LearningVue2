@@ -4,5 +4,6 @@ export default{
         return {
 
         }
-    }
+    },
+    props: ['taskName', 'toggleBtn']
 }
