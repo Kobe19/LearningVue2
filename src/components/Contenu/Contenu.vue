@@ -54,12 +54,12 @@
         <input @input="toggleResult" type="text" id="prenom" class="form-control" v-model="formData.prenom2" required>
       </div>
       <div class="form-group input-space">
-        <label for="prenom">Ton numero de Telephone</label>
-        <input @input="toggleResult" type="text" id="prenom" class="form-control" v-model.number="formData.telephone" required>
+        <label for="numero">Ton numero de Telephone</label>
+        <input @input="toggleResult" type="text" id="numero" class="form-control" v-model.number="formData.telephone" required>
       </div>
       <div class="form-group input-space">
-        <label for="txt">Ton texte</label>
-        <textarea @input="toggleResult" id="txt" class="form-control" v-model="formData.texte"></textarea>
+        <label for="">Ton texte</label>
+        <textarea @input="toggleResult" id="tontexte" class="form-control" v-model="formData.texte"></textarea>
       </div>
       <div class="form-check input-space">
         <input v-model="formData.checkFruits" type="checkbox" id="banane" value="banane" class="form-check-input">
@@ -95,7 +95,7 @@
     </div>
     <div>
       <h2>Aller à ma todoList : </h2>
-      <router-link to="/todo"><button class="btn btn-success">my ToDoList</button></router-link>
+      <button @click="goToDo" class="btn btn-success">my ToDoList</button>
     </div>
 
 

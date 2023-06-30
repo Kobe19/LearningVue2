@@ -57,6 +57,9 @@ export default {
         },
         toggleResult: function (){
             this.infoSubmit = false
+        },
+        goToDo: function (){
+            this.$router.push('/todo')
         }
 
     },

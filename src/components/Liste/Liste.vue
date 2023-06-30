@@ -1,6 +1,5 @@
 <script src="./Liste.js"></script>
 <style scoped src="./Liste.css"></style>
-
 <template>
   <div class="container">
     <ul class="liste">
