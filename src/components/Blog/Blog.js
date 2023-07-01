@@ -16,8 +16,8 @@ export default {
                     for(const article of response.data){
                         this.allArticles.push(article)
                     }
-
                 }
+                
             )
     }
 

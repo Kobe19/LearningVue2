@@ -23,5 +23,8 @@ export default {
 </script>
 
 <style>
-
+  body{
+    background: skyblue;
+    background: linear-gradient(to right, white, skyblue);
+  }
 </style>
